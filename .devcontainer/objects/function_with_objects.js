@@ -41,14 +41,15 @@
 // console.log(arrayout(myNewArray))
 
 
-// global and local scope
-if (true) {
-    let a=10
-const b =20
-var c =30
-console.log(a)//block scope
-}
+// // global and local scope
+// if (true) {
+//     let a=10
+// const b =20
+// var c =30
+// console.log(a)//block scope
+// }
 
 // console.log(a)
 // console.log(b)
-console.log(c)
+// console.log(c)
+
