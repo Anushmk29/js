@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colour switch</title>
+    <style>
+        .contain{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        h1,h2{
+            text-align:center
+        }
+        #grey,#beige,#yellow,#magenta{
+            /* background-color: aqua; */
+            height: 10vh;
+            width: 10vh;
+            border-radius: 8px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body >
+    <h1>Color switch</h1>
+    <div class="contain">
+    <span class="button" id="grey" style="background-color: grey;"></span>
+    <span class="button" id="beige" style="background-color: beige;"></span>
+    <span class="button" id="yellow" style="background-color: yellow;"></span>
+    <span class="button" id="magenta" style="background-color: magenta;"></span>
+</div>
+    <h2>
+        try clicking on the colors
+        <span>to change the background color of this page!</span>
+    </h2>
+</body>
+<script src="index.js"></script>
+</html>
