@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body  style="background-color: #212121;color: beige;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function createli(listName){
+    const list = document.createElement('li')
+    list.appendChild(document.createTextNode(listName))
+    document.querySelector('.language').appendChild(list)
+}
+
+createli('python')
+createli('python')
+
+//edit or remove
+
+// const secondlang =document.querySelector("li:nth-child(2)")
+// console.log(secondlang);
+// // secondlang.innerHTML = 'mojo'
+// const newli =document.createElement('li')
+// console.log(newli);
+// newli.textContent = 'mojo'
+// secondlang.replaceWith(newli)
+
+//edit 
+const  firstlang = document.querySelector('li:nth-child(1)')
+// console.log(firstlang)
+const linew = document.createElement('li')
+// console.log(linew)
+linew.textContent = "type script"
+// console.log(linew.textContent)
+firstlang.replaceWith(linew)
+
+//edi wih outerhtml
+const  lang = document.querySelector('li:last-child')
+lang.outerHTML = '<li>go</li>'
+
+//remove 
+
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove()
+</script>
+</html>
