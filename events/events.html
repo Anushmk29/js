@@ -39,11 +39,50 @@
 
 //this is bubbling :-from child to parent
 //we can remove false as default is false
-document.getElementById('images').addEventListener("click",(e)=>{
-    console.log("clicked inside ul")
-},false)
-document.getElementById('window').addEventListener("click",(e)=>{
-    console.log("window here")
+// document.getElementById('images').addEventListener("click",(e)=>{
+//     console.log("clicked inside ul")
+// },false)
+// document.getElementById('window').addEventListener("click",(e)=>{
+//     console.log("window here")
+// },false)
+
+//event capturing:-top to bottom
+// document.getElementById('images').addEventListener("click",(e)=>{
+//     console.log("clicked inside ul")
+// },true)
+// document.getElementById('window').addEventListener("click",(e)=>{
+//     console.log("window here")
+// },true)
+
+
+
+// document.getElementById('images').addEventListener("click",(e)=>{
+//     console.log("clicked inside ul")
+// })
+// document.getElementById('window').addEventListener("click",(e)=>{
+//     console.log("window here")
+//     e.stopPropagation()// event will not bubble and wont go to the upper event
+// })
+// document.getElementById('google').addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     e.stopPropagation();
+//     console.log("google clicked");
+// },false)
+
+const image = document.querySelector('#images').addEventListener('click',(e)=>{
+     console.log(e.target)//we can target the particular element
+    //  console.log(e.target.parentNode)
+     console.log(e.target.tagName)
+     let removeIt  = e.target.parentNode
+     if (e.target.tagName === 'IMG') {
+        console.log(e.target.id);
+        removeIt.parentNode.removeChild(removeIt)
+     }
+    //  removeIt.remove() //to remve the element
+    //  let r = removeIt.parentNode
+    //  console.log(r);
+    //  removeIt.parentNode.removeChild(removeIt)
+
 },false)
 </script>
 </html>
