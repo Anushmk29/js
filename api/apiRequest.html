@@ -1,12 +1,22 @@
-//xml http request use mdn reference
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
 </head>
-<body>
+<body style="background-color: rgba(0, 0, 0, 0.832); color: azure;">
     
 </body>
+<script>
+    const requestUrl = 'https://api.github.com/users/Anushmk29'
+    //this is a class
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET',requestUrl)
+  console.log(xhr.readyState);
+  xhr.send()
+</script>
+<!-- xml http request use mdn reference -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest -->
 </html>
