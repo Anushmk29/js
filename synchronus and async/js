@@ -1,0 +1,7 @@
+javascript :- synchronus , single threaded
+this is for default javascript
+
+in execution context each operation waits for the ast one to complete before executing
+as it runs on single thread
+
+blocking and non blocking code

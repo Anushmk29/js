@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai and js</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+    // const start_this=start.addEventListener('click',()=>{
+    //     console.log("anush",Date.now());
+    // })
+    //   setInterval(start_this,1000)
+    // const stop_this = stop.addEventListener('click',()=>{
+    //    setTimeout(start_this)
+    //    console.log("stopped");
+    // } 
+    // )
+    // setInterval(()=>{
+    //     console.log("anush",Date.now());
+    // })
+
+    //clearInterval it stops the whole program
+    function timer (){
+    const start_this=start.addEventListener('click',()=>{
+        const sayDate = function(){
+        console.log("anush",Date.now());
+    }
+    const set = setInterval(sayDate,1000,"hi")
+
+    const stop_this = stop.addEventListener('click',()=>{
+       clearTimeout(set)//this stops the process
+       console.log("stopped");
+    } )
+    
+    })
+}
+ timer()
+
+</script>
+</html>

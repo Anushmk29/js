@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async </title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="stop"> STOP</button>
+</body>
+<script>
+    
+    // setTimeout(()=>{
+        //   console.log("anush")
+        // },2000)
+        
+        // setInterval(()=>{console.log("hi")},1000)
+        const say = ()=>{
+            console.log("sbksakjhsaj");
+        }
+
+      const change =  ()=>{ const p =document.querySelector('h1').textContent="best js"
+            //  console.log(p)
+    }
+        const changeme=setTimeout(change,3000)
+
+//to stop the above event
+//   clearTimeout(changeme)
+
+//using event to stop l
+document.querySelector('#stop').addEventListener('click',()=>
+{
+    clearTimeout(changeme)
+    console.log('STOPPPPP')
+})
+    </script>
+</html>
