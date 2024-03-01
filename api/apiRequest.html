@@ -14,9 +14,18 @@
     //this is a class
   const xhr = new XMLHttpRequest();
   xhr.open('GET',requestUrl)
-  console.log(xhr.readyState);
+  xhr.onreadystatechange = function (){
+    console.log(xhr.readyState);
+    if (xhr.readyState === 4) {
+      const data = JSON.parse(this.responseText)//converts string in data
+      console.log(data.followers)//we are talking about the current context
+    }
+    }
   xhr.send()
 </script>
+<!-- v8 engine it givesthe debugging tools and  some api access -->
+<!-- console.log is a debugging tool or browser ka develop tool, the runtime of js injects this console.log -->
 <!-- xml http request use mdn reference -->
 <!-- https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest -->
+
 </html>
